@@ -12,33 +12,6 @@ select COUNT(a.trip_distance_id),b.passenger_count from awesome-highway-400008.u
 select b.pickup_latitude,b.pickup_longitude,COUNT(a.trip_distance_id) from awesome-highway-400008.uber_dataset.fact_table a
 JOIN `uber_dataset.pickup_location_dim`b ON a.pickup_location_id=b.pickup_location_id GROUP BY b.pickup_latitude,b.pickup_longitude ORDER BY COUNT(a.trip_distance_id) DESC LIMIT 10;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 CREATE OR REPLACE TABLE `awesome-highway-400008.uber_dataset.tbl_analytics` AS (
 SELECT
 f.trip_distance_id,
